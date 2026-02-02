@@ -90,14 +90,18 @@ const ManageSalonRequests: React.FC = () => {
             }`}
           >
             <div className="h-full rounded-3xl border border-white/10 bg-[#0F1422] p-6 overflow-y-auto flex flex-col justify-between">
-              <div className="">
-                <h1 className="text-2xl text-gray-300">
+              <div className="text-gray-300 flex flex-col gap-3">
+                <h1 className="text-3xl">
                   {selectedSalon?.salonName}{" "}
                   <span className="text-sm">({selectedSalon?.category})</span>
                 </h1>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm ">
                   {selectedSalon?.fullAddress} {selectedSalon?.city}
                 </p>
+                <p>{selectedSalon?.salonEmail}</p>
+                <p>{selectedSalon?.phone}</p>
+                <p>{selectedSalon?.fullName}</p>
+                <p>{selectedSalon?.salonEmail}</p>
               </div>
               <div className="flex gap-5 items-center">
                 <Button
@@ -151,3 +155,4 @@ const ManageSalonRequests: React.FC = () => {
 };
 
 export default ManageSalonRequests;
+
